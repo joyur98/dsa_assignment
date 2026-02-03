@@ -21,11 +21,62 @@ char pop(){
     }
     else{
         printf("Stack is empty"); //prints when stack is empty
-        return '\0'; //returning something for safetl
+        return '\0'; //returning something for safety
     }
 }
 
+int match(char x, char y){ //returns true if the parentheses match otherwise returns false
+    if(x == '(' && y == ')')
+        return 1;
+    
+    if (x== '{' && y == '}')
+        return 1;
+    
+    if(x == '[' && y == ']')
+        return 1;
+
+    else
+        return 0;
+}
+
+
+int isbalanced(char mathexp[]){ //to check if the expression is balanced or not
+    top = -1;                   // stack is reset
+
+    for(int i = 0; i < strlen(mathexp); i++){
+        char ch = mathexp[i];
+
+        if(ch == '(' || ch == '{' || ch == '['){
+            push(ch);
+        }
+        else if(ch == ')' || ch == '}' || ch == ']'){
+            char topch = pop();
+            if(!match(topch, ch)){
+                return 0;
+            }
+        }
+
+    }
+    
+    if (top == -1){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+
+
 int main(){
+
+    char exp1[] = "a + (b-c) * (d";
+    char exp2[] = " m+ [a − b ∗ (c + d ∗ {m)]";
+    char exp3[] = "a + (b-c)";
+
+    printf("Expression 1: %s\n", isbalanced(exp1) ? "balanced" : "not balanced");
+    printf("Expression 2: %s\n", isbalanced(exp2) ? "balanced" : "not balanced");
+    printf("Expression 3: %s\n", isbalanced(exp3) ? "balanced" : "not balanced");
+        
 
     return 0;
 }
