@@ -8,7 +8,7 @@ int top = -1; //for now, the stack is empty
 
 void push(char c){
     if(top < 99){ //checks if stack has space
-        stack[++top] = c;
+        stack[++top] = c; //adds parentheses to the stack
     }
     else{
         printf("Stack Overflow"); //prints when stack has no space
@@ -17,7 +17,7 @@ void push(char c){
 
 char pop(){
     if(top >= 0){ //checks if stack is empty
-        return stack[top--];
+        return stack[top--]; //removes paranthesis from the stack
     }
     else{
         printf("Stack is empty"); //prints when stack is empty
@@ -51,17 +51,17 @@ int isbalanced(char mathexp[]){ //to check if the expression is balanced or not
         }
         else if(ch == ')' || ch == '}' || ch == ']'){
             char topch = pop();
-            if(!match(topch, ch)){
+            if(!match(topch, ch)){ //checks if the popped element and the current element match or not
                 return 0;
             }
         }
 
     }
     
-    if (top == -1){
+    if (top == -1){ //all brackets were balanced
         return 1;
     }
-    else{
+    else{ //unbalanced
         return 0;
     }
 }
