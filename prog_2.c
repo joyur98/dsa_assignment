@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
+#include <math.h>
 
 #define SIZE 100
 
@@ -66,7 +67,7 @@ void infixToPostfix(char infix[], char postfix[]){
 
         else{
             while(topOP != -1 && precendece(stackOP[topOP]) >= precendece(ch)){ //positioning of operators in postfix
-                postfix[j++] = popOP;
+                postfix[j++] = popOP();
             }
             pushOP(ch);
         }
@@ -75,6 +76,8 @@ void infixToPostfix(char infix[], char postfix[]){
     while (topOP != -1){ //leftover operators added to postfix if any
         postfix[j++] = popOP();
     }
+
+    postfix[j] = '\0';
 }
 
 //function to evaluate the postfix
@@ -86,12 +89,13 @@ int evaluatePostfix(char postfix[]){
         ch = postfix[i];
 
         if(isdigit(ch)) {
-            pushINT(ch - '0');
+            pushINT(ch - '0'); //converts string to int and push to int stack
         }
 
         else {
             int b = popINT();
             int a = popINT();
+                //a and b are two operands from the stack
 
             switch(ch){
                 case '+' :
@@ -113,14 +117,15 @@ int evaluatePostfix(char postfix[]){
         }
     }
 
-    return popINT();
+    return popINT(); //final answer
 }
 
+//the main function
 int main() {
     char infix[SIZE], postfix[SIZE];
 
     printf("Enter infix expression: ");
-    scanf("%s", infix);
+    scanf("%[^\n]", infix);
 
     infixToPostfix(infix, postfix);
 
