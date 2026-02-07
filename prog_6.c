@@ -44,7 +44,7 @@ void minHeap(int arr[], int n, int i){
 
     if(smallest != i){
         swap(&arr[i], &arr[smallest]);
-        minheap(arr, n, smallest);
+        minHeap(arr, n, smallest);
     }
 }
 
@@ -60,4 +60,35 @@ void buildMinHeap( int arr[], int n){
     for (int i = n / 2 - 1; i >= 0; i--){
         minHeap(arr, n, i);
     }
+}
+
+//the main function
+int main() {
+    int arr[] = {10, 3, 5, 2, 7, 15, 20};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    printf("Before Array: ");
+
+    for (int i = 0; i < n; i++){
+        printf("%d ", arr[i]);
+    }
+
+    //building max heap
+    buildMaxHeap(arr, n);
+    printf("Max Heap: ");
+
+    for (int i = 0; i < n; i++){
+        printf("%d ", arr[i]);
+    }
+
+    //bulding min heap using same array
+    int arr2[] = {10, 3, 5, 2, 7, 15, 20};
+    buildMinHeap(arr2, n);
+    printf("Min Heap: ");
+
+    for (int i = 0; i < n; i++){
+        printf("%d ", arr2[i]);
+    }
+
+    return 0;
 }
