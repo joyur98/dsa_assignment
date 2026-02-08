@@ -54,3 +54,19 @@ void dijsktra(int graph[SIZE][SIZE], int n, int source){
     }
 }
 
+
+int main(){
+    int n = 5;
+    int graph[SIZE][SIZE] = {
+        {0, 10, 0, 30, 100},
+        {10, 0, 50, 0, 0},
+        {0, 50, 0, 20, 10},
+        {30, 0, 20, 0, 60},
+        {100, 0, 10, 60, 0}};
+
+    int source = 0;
+
+    dijsktra(graph, n, source);
+
+    return 0;
+}
