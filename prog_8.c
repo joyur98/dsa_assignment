@@ -104,3 +104,62 @@ void mergeSort(int arr[], int left, int right) {
         merge(arr, left, mid, right);
     }
 }
+
+
+int main() {
+    int n, choice;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    int arr[n];
+
+    srand(time(NULL));
+    for (int i = 0; i < n; i++)
+        arr[i] = rand() % 1000 + 1;
+
+    printf("\nNumbers before sorting:\n");
+    print(arr, n);
+
+    printf("\nChoose Sorting Algorithm:\n");
+    printf("1. Bubble Sort\n");
+    printf("2. Selection Sort\n");
+    printf("3. Insertion Sort\n");
+    printf("4. Merge Sort\n");
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+
+    comparisons = 0;
+    swapsCount = 0;
+
+    switch (choice) {
+        case 1:
+            bubbleSort(arr, n);
+            break;
+        case 2:
+            selectionSort(arr, n);
+            break;
+        case 3:
+            insertionSort(arr, n);
+            break;
+        case 4:
+            mergeSort(arr, 0, n- 1);
+            break;
+        default:
+            printf("Invalid choice!\n");
+            return 0;
+    }
+
+    printf("\nNumbers after sorting:\n");
+    print(arr, n);
+
+    printf("\nPerformance metrics:\n");
+    printf("Total Comparisons: %lld\n", comparisons);
+
+    if (choice != 4)
+        printf("Total Swaps: %lld\n", swapsCount);
+    else
+        printf("Swaps: Not applicable for Merge Sort\n");
+
+    return 0;
+}
