@@ -105,7 +105,7 @@ void mergeSort(int arr[], int left, int right) {
     }
 }
 
-
+//the main function where the work is done
 int main() {
     int n, choice;
 
@@ -156,7 +156,7 @@ int main() {
     printf("\nPerformance metrics:\n");
     printf("Total Comparisons: %lld\n", comparisons);
 
-    if (choice != 4)
+    if (choice != 4) // merge sort doesnt swap so its not applicable with swapscount
         printf("Total Swaps: %lld\n", swapsCount);
     else
         printf("Swaps: Not applicable for Merge Sort\n");
