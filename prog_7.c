@@ -2,7 +2,7 @@
 #include <limits.h>
 
 #define SIZE 10 //max number of vertices
-
+//excuse the new commit about the prog_8 file on this commit history on this file, i am sorry about my mistake
 //function to find the vertex with minimum distance
 int minDistance(int dist[], int visited[], int n) {
     int min = INT_MAX; //from limits.h
