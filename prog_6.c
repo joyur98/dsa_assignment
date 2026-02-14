@@ -72,6 +72,7 @@ int main() {
     for (int i = 0; i < n; i++){
         printf("%d ", arr[i]);
     }
+    printf("\n");
 
     //building max heap
     buildMaxHeap(arr, n);
@@ -80,6 +81,7 @@ int main() {
     for (int i = 0; i < n; i++){
         printf("%d ", arr[i]);
     }
+    printf("\n");
 
     //bulding min heap using same array
     int arr2[] = {10, 3, 5, 2, 7, 15, 20};
@@ -89,6 +91,7 @@ int main() {
     for (int i = 0; i < n; i++){
         printf("%d ", arr2[i]);
     }
+        printf("\n");
 
     return 0;
 }
