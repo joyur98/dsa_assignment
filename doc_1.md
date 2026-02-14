@@ -57,7 +57,7 @@ The stack follows LIFO (Last In First Out) principle:
 
 ---
 
-##(c) Overview of `main()` method organization
+###(c)Overview of `main()` method organization
 
 The `main()` function controls program execution:
 
