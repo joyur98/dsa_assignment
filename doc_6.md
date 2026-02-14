@@ -94,3 +94,6 @@ The `main()` function controls program execution:
     int arr2[] = {10, 3, 5, 2, 7, 15, 20};
     buildMinHeap(arr2, n);
     printf("Min Heap: ");
+---
+## (d) Sample output of program
+![alt text](image-5.png)
