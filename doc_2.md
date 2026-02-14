@@ -9,10 +9,9 @@ The program uses **two stack data structures** implemented using arrays.
 
 - `int topOP = -1;`  
   Tracks the top position of the operator stack.  
-  - `topOP = -1` → stack is empty
+  - `topOP = -1` → stack is empty 
 
 ---
-
 - `int stackINT[SIZE];`  
   A fixed-size integer array used to store operands during postfix evaluation.
 
@@ -118,4 +117,4 @@ The `main()` function controls overall execution:
 
 ## (d) Sample run of output
 
-    ![alt text](image-1.png)
+![alt text](image-1.png)
