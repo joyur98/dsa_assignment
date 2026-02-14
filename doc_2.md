@@ -2,7 +2,7 @@
 
 ## (a) Explanation of data structures
 
-The program uses **two stack data structures** implemented using arrays.
+The program uses two stack data structures implemented using arrays.
 
 - `char stackOP[SIZE];`  
   A fixed-size character array used to store operators and parentheses during conversion.
