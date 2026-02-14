@@ -96,6 +96,6 @@ The `main()` function controls program execution:
     deleteNode(&head, second);
     printf("\nAfter deleting node 20:\n");
     print(head);
-
+---
 ## (d) Sample out of program
 ![alt text](image-3.png)
