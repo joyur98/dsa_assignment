@@ -1,6 +1,6 @@
 # Program Documentation: Balanced Parentheses Checker
 
-## (a)Explanation of data structures
+## (a) Explanation of data structures
 
 The program uses a stack data structure implemented using an array.
 
@@ -18,7 +18,7 @@ The stack follows LIFO (Last In First Out) principle:
 
 ---
 
-## (b)Description of functions
+## (b) Description of functions
 
 ### `void push(char c)`
 - **Purpose:** Adds an opening bracket to the stack.
@@ -57,7 +57,7 @@ The stack follows LIFO (Last In First Out) principle:
 
 ---
 
-###(c)Overview of `main()` method organization
+## (c) Overview of `main()` method organization
 
 The `main()` function controls program execution:
 
