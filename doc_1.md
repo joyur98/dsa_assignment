@@ -69,5 +69,4 @@ The `main()` function controls program execution:
 
 ## (d) Sample output run
 
-`Output`:
   ![alt text](image.png)
