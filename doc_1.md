@@ -66,3 +66,8 @@ The `main()` function controls program execution:
    char exp1[] = "a + (b-c) * (d";
    char exp2[] = " m+ [a − b ∗ (c + d ∗ {m)]";
    char exp3[] = "a + (b-c)";
+
+## (d) Sample output run
+
+`Output`:
+  ![alt text](image.png)
